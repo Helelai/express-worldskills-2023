@@ -5,49 +5,47 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".session1.OnboardingActivity">
+    tools:context=".session1.Onboarding2Activity">
 
     <ImageView
-        android:id="@+id/OnBoarding1IV"
+        android:id="@+id/OnBoarding2IV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="111dp"
+        android:layout_marginTop="133dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/onboarding1" />
+        app:srcCompat="@drawable/onboarding2" />
 
     <TextView
-        android:id="@+id/DeliveryTW"
+        android:id="@+id/PaymentTW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:width="297dp"
-        android:height="58dp"
+        android:layout_marginTop="59dp"
+        android:width="287dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Quick Delivery At Your Doorstep"
+        android:text="Flexible Payment"
         android:textAlignment="center"
         android:textColor="@color/titleBlue"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OnBoarding1IV"
+        app:layout_constraintTop_toBottomOf="@+id/OnBoarding2IV"
         app:lineHeight="24dp" />
 
     <TextView
-        android:id="@+id/DeliveryTextTW"
+        android:id="@+id/PaymentTextTW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:width="271dp"
-        android:height="50dp"
         android:fontFamily="@font/roboto"
-        android:text="Enjoy quick pick-up and delivery to your destination"
+        android:text="Different modes of payment either before and after delivery without stress"
         android:textAlignment="center"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DeliveryTW"
+        app:layout_constraintTop_toBottomOf="@+id/PaymentTW"
         app:lineHeight="20dp" />
 
     <LinearLayout
@@ -59,7 +57,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DeliveryTextTW">
+        app:layout_constraintTop_toBottomOf="@+id/PaymentTextTW">
 
         <Button
             android:id="@+id/SkipB"
@@ -67,7 +65,6 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:backgroundTint="@android:color/transparent"
-            android:fontFamily="@font/roboto_bold"
             android:padding="9.38px"
             android:paddingStart="18.18px"
             android:paddingLeft="18.18px"
@@ -93,9 +90,9 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:backgroundTint="@color/titleBlue"
-            android:fontFamily="@font/roboto"
             android:onClick="NextBClick"
             android:text="Next"
             app:cornerRadius="4.69dp" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

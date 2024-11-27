@@ -12,23 +12,27 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.wordskills2023.R;
 
-public class OnboardingActivity extends AppCompatActivity {
+public class Onboarding3Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_onboarding);
+        setContentView(R.layout.activity_onboarding3);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
     }
 
-    public void NextBClick(View view) {
-        Intent intent = new Intent(this, Onboarding2Activity.class);
+    public void SignInBClick(View view) {
+        Intent intent = new Intent(this, HolderActivity.class);
+        startActivity(intent);
+    }
+
+    public void SignUpBClick(View view) {
+        Intent intent = new Intent(this, HolderActivity.class);
         startActivity(intent);
     }
 }

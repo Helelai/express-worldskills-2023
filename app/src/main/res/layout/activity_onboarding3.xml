@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".session1.Onboarding3Activity">
+
+    <ImageView
+        android:id="@+id/OnBoarding3IV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/onboarding3" />
+
+    <TextView
+        android:id="@+id/TrackingTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="63dp"
+        android:width="297dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Real-time Tracking"
+        android:textAlignment="center"
+        android:textColor="@color/titleBlue"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OnBoarding3IV"
+        app:lineHeight="24dp" />
+
+    <TextView
+        android:id="@+id/TrackingTextTW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:width="301dp"
+        android:fontFamily="@font/roboto"
+        android:text="Track your packages/items from the comfort of your home till final destination"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrackingTW"
+        app:lineHeight="20dp" />
+
+    <Button
+        android:id="@+id/SignUpB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="91dp"
+        android:width="342dp"
+        android:height="46dp"
+        android:backgroundTint="@color/titleBlue"
+        android:onClick="SignUpBClick"
+        android:paddingLeft="146px"
+        android:paddingTop="15px"
+        android:paddingRight="146px"
+        android:paddingBottom="15px"
+        android:text="Sign Up"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TrackingTextTW" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpB">
+
+        <TextView
+            android:id="@+id/HaveAccTW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:text="Already have an account?"
+            android:textColor="#A7A7A7"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/SignInB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_bold"
+            android:onClick="SignInBClick"
+            android:text="Sign in"
+            android:textColor="@color/titleBlue"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
