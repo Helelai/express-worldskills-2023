@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".session1.Onboarding3Activity">
+    tools:context=".activities.session1.Onboarding3Activity">
 
     <ImageView
         android:id="@+id/OnBoarding3IV"
@@ -42,6 +42,7 @@
         android:fontFamily="@font/roboto"
         android:text="Track your packages/items from the comfort of your home till final destination"
         android:textAlignment="center"
+        android:textColor="@color/blackDefault"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,6 +57,7 @@
         android:width="342dp"
         android:height="46dp"
         android:backgroundTint="@color/titleBlue"
+        android:fontFamily="@font/roboto_bold"
         android:onClick="SignUpBClick"
         android:paddingLeft="146px"
         android:paddingTop="15px"
@@ -83,7 +85,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/roboto"
             android:text="Already have an account?"
-            android:textColor="#A7A7A7"
+            android:textColor="@color/grayHint"
             android:textSize="14dp" />
 
         <TextView
@@ -91,7 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/roboto_bold"
+            android:fontFamily="@font/roboto_medium"
             android:onClick="SignInBClick"
             android:text="Sign in"
             android:textColor="@color/titleBlue"

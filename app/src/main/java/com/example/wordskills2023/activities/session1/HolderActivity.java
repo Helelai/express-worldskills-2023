@@ -1,8 +1,8 @@
-package com.example.wordskills2023.session1;
+package com.example.wordskills2023.activities.session1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.os.CountDownTimer;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,27 +12,33 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.wordskills2023.R;
 
-public class Onboarding3Activity extends AppCompatActivity {
+import com.example.wordskills2023.activities.session2.SignUpActivity;
+
+public class HolderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_onboarding3);
+        setContentView(R.layout.activity_holder);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
 
-    public void SignInBClick(View view) {
-        Intent intent = new Intent(this, HolderActivity.class);
-        startActivity(intent);
-    }
+        Intent intent = new Intent(this, SignUpActivity.class);
+        CountDownTimer timer = new CountDownTimer(3000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
 
-    public void SignUpBClick(View view) {
-        Intent intent = new Intent(this, HolderActivity.class);
-        startActivity(intent);
+            }
+
+            @Override
+            public void onFinish() {
+                startActivity(intent);
+            }
+        };
+        timer.start();
     }
 }

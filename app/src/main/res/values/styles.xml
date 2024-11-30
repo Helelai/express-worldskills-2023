@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WordSkills2023" parent="Base.Theme.WordSkills2023" />
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/holo_red_light</item>
+    </style>
+</resources>

@@ -1,8 +1,8 @@
-package com.example.wordskills2023.session1;
+package com.example.wordskills2023.activities.session1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.os.CountDownTimer;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,23 +12,32 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.wordskills2023.R;
 
-public class OnboardingActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_onboarding);
+        setContentView(R.layout.activity_splash);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-    }
+        Intent intent = new Intent(this, OnboardingActivity.class);
+        CountDownTimer timer = new CountDownTimer(3000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
 
-    public void NextBClick(View view) {
-        Intent intent = new Intent(this, Onboarding2Activity.class);
-        startActivity(intent);
+            }
+
+            @Override
+            public void onFinish() {
+                startActivity(intent);
+                finish();
+            }
+        };
+        timer.start();
     }
 }

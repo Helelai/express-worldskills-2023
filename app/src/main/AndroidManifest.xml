@@ -13,19 +13,22 @@
         android:theme="@style/Theme.WordSkills2023"
         tools:targetApi="31">
         <activity
-            android:name=".session1.HolderActivity"
+            android:name=".activities.session2.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".session1.Onboarding3Activity"
+            android:name=".activities.session1.HolderActivity"
             android:exported="false" />
         <activity
-            android:name=".session1.Onboarding2Activity"
+            android:name=".activities.session1.Onboarding3Activity"
             android:exported="false" />
         <activity
-            android:name=".session1.OnboardingActivity"
+            android:name=".activities.session1.Onboarding2Activity"
             android:exported="false" />
         <activity
-            android:name=".session1.SplashActivity"
+            android:name=".activities.session1.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.session1.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

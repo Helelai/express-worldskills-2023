@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">WordSkills2023</string>
+    <string name="terms_and_condition">
+        <font color="#A7A7A7">By ticking this box, you agree to our</font> <font color="#EBBC2E">Terms and conditions and private policy</font>
+    </string>
 </resources>
