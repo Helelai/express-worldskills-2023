@@ -27,7 +27,7 @@ public class HolderActivity extends AppCompatActivity {
             return insets;
         });
 
-        Intent intent = new Intent(this, SignUpActivity.class);
+        Intent intent = new Intent(this, SplashActivity.class);
         CountDownTimer timer = new CountDownTimer(3000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
