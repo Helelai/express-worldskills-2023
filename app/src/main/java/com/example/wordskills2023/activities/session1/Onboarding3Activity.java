@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.wordskills2023.R;
+import com.example.wordskills2023.activities.session2.SignInActivity;
 
 public class Onboarding3Activity extends AppCompatActivity {
 
@@ -27,7 +28,7 @@ public class Onboarding3Activity extends AppCompatActivity {
     }
 
     public void SignInBClick(View view) {
-        Intent intent = new Intent(this, HolderActivity.class);
+        Intent intent = new Intent(this, com.example.wordskills2023.activities.session2.SignInActivity.class);
         startActivity(intent);
     }
 

@@ -170,7 +170,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView">
 
                 <EditText
-                    android:id="@+id/PasswordET"
+                    android:id="@+id/PasswordETNewPass"
                     android:layout_width="310dp"
                     android:layout_height="44dp"
                     android:background="@null"
@@ -181,10 +181,11 @@
                     android:paddingTop="14px"
                     android:paddingRight="10px"
                     android:paddingBottom="14px"
+                    android:textColor="@color/blackDefault"
                     android:textColorHint="@color/lightGrayHint" />
 
                 <ImageButton
-                    android:id="@+id/HideShowPassB"
+                    android:id="@+id/HideShowPassBNewPass"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -218,7 +219,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/ConfirmPasswordTW">
 
                 <EditText
-                    android:id="@+id/ConfirmPasswordET"
+                    android:id="@+id/ConfirmPasswordETNewPass"
                     android:layout_width="310dp"
                     android:layout_height="44dp"
                     android:background="@null"
@@ -229,10 +230,11 @@
                     android:paddingTop="14px"
                     android:paddingRight="10px"
                     android:paddingBottom="14px"
+                    android:textColor="@color/blackDefault"
                     android:textColorHint="@color/lightGrayHint" />
 
                 <ImageButton
-                    android:id="@+id/HideShowConfirmPassB"
+                    android:id="@+id/HideShowConfirmPassBNewPass"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -243,7 +245,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/TermsCheckbox"
+                android:id="@+id/RememberPassword"
                 android:layout_width="296dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -260,8 +262,7 @@
                     android:layout_width="14dp"
                     android:layout_height="14dp"
                     android:height="14dp"
-                    android:background="@drawable/image_checkbox"
-
+                    android:background="@drawable/blue_checkbox"
                     android:button="@android:color/transparent"
                     android:checked="false"
                     android:fontFamily="@font/roboto"
@@ -269,7 +270,7 @@
                     android:textSize="12dp" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/RememberPass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/terms_and_condition"
@@ -279,14 +280,12 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/SignUpBCrAcc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/ResendB"
+                android:layout_width="342dp"
+                android:layout_height="46dp"
                 android:layout_marginTop="64dp"
-                android:width="342dp"
-                android:height="46dp"
-                android:background="@color/titleBlue"
-                android:enabled="true"
+                android:backgroundTint="@color/button_background_color"
+                android:enabled="false"
                 android:fontFamily="@font/roboto_bold"
                 android:onClick="SignUpBCrAccClick"
                 android:paddingLeft="146px"
@@ -294,10 +293,11 @@
                 android:paddingRight="146px"
                 android:paddingBottom="15px"
                 android:text="Sign Up"
+                android:textColor="@color/button_text_enabled_disabled_color"
                 app:cornerRadius="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TermsCheckbox" />
+                app:layout_constraintTop_toBottomOf="@+id/RememberPassword" />
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
@@ -307,10 +307,10 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/SignUpBCrAcc">
+                app:layout_constraintTop_toBottomOf="@+id/ResendB">
 
                 <TextView
-                    android:id="@+id/HaveAccTWCrAcc"
+                    android:id="@+id/RememberPassTW"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -320,7 +320,7 @@
                     android:textSize="14dp" />
 
                 <TextView
-                    android:id="@+id/SignInBCrAcc"
+                    android:id="@+id/ResendB"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

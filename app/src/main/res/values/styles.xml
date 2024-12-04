@@ -4,8 +4,4 @@
     <style name="MyCheckBox" parent="Theme.AppCompat.Light">
         <item name="colorControlNormal">@android:color/holo_red_light</item>
     </style>
-    <style name="Enabled_Disabled_Button" parent="Widget.AppCompat.Button">
-        <item name="background">@drawable/enabled_or_disabled_button</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
 </resources>

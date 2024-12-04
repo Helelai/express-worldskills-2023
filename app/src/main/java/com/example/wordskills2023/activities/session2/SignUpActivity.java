@@ -1,7 +1,6 @@
 package com.example.wordskills2023.activities.session2;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -37,12 +36,11 @@ public class SignUpActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
     }
 
     //Если пользователь нажимает на кнопку с картинкой, чтобы показать пароль
     public void HideShowPassBClick(View view) {
-        EditText PasswordET = findViewById(R.id.PasswordET);
+        EditText PasswordET = findViewById(R.id.PasswordETNewPass);
 
         //Проверка пароля на видимость. Если пароль не виден:
         if (!isPasswordVisible) {
@@ -58,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void HideShowConfirmPassBClick(View view) {
-        EditText ConfirmPasswordET = findViewById(R.id.ConfirmPasswordET);
+        EditText ConfirmPasswordET = findViewById(R.id.ConfirmPasswordETNewPass);
 
         if (!isConfirmPasswordVisible) {
             //Если пароль не виден, то показываем
@@ -76,38 +74,48 @@ public class SignUpActivity extends AppCompatActivity {
         EditText FullNameET = findViewById(R.id.FullNameET);
         EditText PhoneNumberET = findViewById(R.id.PhoneNumberET);
         EditText EmailET = findViewById(R.id.EmailET);
-        EditText PasswordET = findViewById(R.id.PasswordET);
-        EditText ConfirmPasswordET = findViewById(R.id.ConfirmPasswordET);
+        EditText PasswordET = findViewById(R.id.PasswordETNewPass);
+        EditText ConfirmPasswordET = findViewById(R.id.ConfirmPasswordETNewPass);
 
         //Проверка на заполненность всех полей
         if (FullNameET.getText().toString().isEmpty()
-                && PhoneNumberET.getText().toString().isEmpty()
-                && EmailET.getText().toString().isEmpty()
-                && PasswordET.getText().toString().isEmpty()
-                && ConfirmPasswordET.getText().toString().isEmpty()) {
+                || PhoneNumberET.getText().toString().isEmpty()
+                || EmailET.getText().toString().isEmpty()
+                || PasswordET.getText().toString().isEmpty()
+                || ConfirmPasswordET.getText().toString().isEmpty()) {
 
             //Если все поля пусты выводим сообщение
             Toast toastEmptyFields = Toast.makeText(this,"Пожалуйста, проверьте заполненность всех полей.", Toast.LENGTH_LONG);
             toastEmptyFields.show();
         }
         else {
-            Intent intent = new Intent(this, HolderActivity.class);
-            startActivity(intent);
-            finish();
+            if (PasswordET.getText().toString().equals(ConfirmPasswordET.getText().toString())) {
+                Intent intent = new Intent(this, HolderActivity.class);
+                startActivity(intent);
+                finish();
+            }
+            else {
+                Toast toastNotConfirmed = Toast.makeText(this, "Повторный пароль не совпадает!", Toast.LENGTH_LONG);
+                toastNotConfirmed.show();
+            }
         }
     }
 
     public void TermsCHBXClick(View view) {
         CheckBox TermsCHBX = findViewById(R.id.TermsCHBX);
-        Button SignUpB = findViewById(R.id.SignUpBCrAcc);
+        Button SignUpB = findViewById(R.id.ResendB);
 
         if (TermsCHBX.isChecked()) {
             SignUpB.setEnabled(true);
-            SignUpB.setBackgroundResource(R.drawable.enabled_or_disabled_button);
-            SignUpB.setTextColor(Color.WHITE);
         }
         else {
             SignUpB.setEnabled(false);
         }
+    }
+
+    public void SignInBCrAccClick(View view) {
+        Intent intent = new Intent(this, SignInActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
